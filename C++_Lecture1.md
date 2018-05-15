@@ -59,7 +59,7 @@ When we create a class in c++ we want to separate 2 things:
   	implementation
   	The implementation of the code
 
-Our first class:
+#### Our first class:
 
 **sphere.h**
 ```cpp
