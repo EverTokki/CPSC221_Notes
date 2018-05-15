@@ -55,6 +55,7 @@ Running time is a function of *n* such as:
 
 #### Asymptotic Analysis hacks:
 *Eliminate low order terms, and then constant coefficients.*
+
   |   *T(n)*                | Eliminate low order | *f(n)*  |
   |    :---:                | :----:              | :---:   |
   |   4*n* + 5              |    4*n*             | *n*     |
