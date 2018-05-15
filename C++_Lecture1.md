@@ -1,11 +1,11 @@
 # C++ Programming Basics
 
-#### 1. How to
+### 1. How to
 
   * To compile: `g++ -o name FirstProgram.cpp`
   * To run: `./name`
 
- ##### FirstProgram.cpp
+ #### FirstProgram.cpp
  ```cpp
 #include <iostream> //allows for printing
 
@@ -27,7 +27,7 @@
  }
  ```
 
- #### 2. Variables and Classes in C++
+ ### 2. Variables and Classes in C++
 
  Every variable is defined by four properties:
    1. type
@@ -36,22 +36,22 @@
    4. memory location
 
  And every variable is one of two types:
- 
+
  | Primitive | Complex(Object) |
  | :--- | :--- |
  |int myFavoriteInt;|Sphere myFavoriteSphere;|
  |char grade = 'A';|Cube rubix;|
  |double gamma = 0.653;|Grade courseGrade;|
 
-##### **Creating New Types**
+#### **Creating New Types**
  In data structures, we will be learning and creating new types of structures to store data.
 
-##### Big Idea: Encapsulation
+#### Big Idea: Encapsulation
 When we create a class in c++ we want to separate 2 things:
   * the API: **WHAT** is the class supposed to do?
   * the Implementation: **HOW** does it do it?|
 
-##### Encapsulation principles: C++ Convention
+#### Encapsulation principles: C++ Convention
   * sphere.h
     APIin.h
     Define what other programmers will be able to use
@@ -99,7 +99,7 @@ double Sphere::getVolume() {
 ifndef: if not defined (like an if for the compiler)
 *has this already been defined(aka. included in a cpp file)?*if not, include it
 
-##### Key Concepts in C++ Classes:
+#### Key Concepts in C++ Classes:
 Every class will be made up of common key pieces:
 
   1. Inclusion guards
