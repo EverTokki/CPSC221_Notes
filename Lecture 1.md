@@ -1,6 +1,6 @@
 # Lecture 1: Overview and Asymptotic Analysis
 
-###### 1. Definitions
+#### 1. Definitions
 
   * Algorithm: A sequence of steps to produce a solution to a problem, given a set of inputs
 
@@ -8,7 +8,7 @@
 
   * Abstract Data Type (ADT): A collection of data and a set of operations that can be performed on the collection so that the data behave in a well-defined way
 
-###### 2. Suppose we have a collection of people at a concert. How are we going to find a specific person, given their name?
+#### 2. Suppose we have a collection of people at a concert. How are we going to find a specific person, given their name?
 
 ```
 T(n) = Running time
@@ -27,7 +27,7 @@ There are different metrics of algorithms:
 
 The input size is indicated with the number *n*; sometimes there can be multiple inputs.
 
-###### 3. Asymptotic Analysis
+#### 3. Asymptotic Analysis
 
 Running time is a function of *n* such as:
   
