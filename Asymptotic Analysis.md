@@ -56,10 +56,10 @@ Running time is a function of *n* such as:
 #### Asymptotic Analysis hacks:
 *Eliminate low order terms, and then constant coefficients.*
   
-  * 4*n* + 5 ⇒ 4*n* ⇒ *n*
-  * 0.5*n*log*n* - 2*n* + 7 ⇒ 0.5*n*log*n*
-  * 2<sup>*n*</sup> + *n*<sup>3</sup> + 3*n* ⇒ 2<sup>*n*</sup> ⇒ 2<sup>*n*</sup>
-  * *n*log(*n*<sup>2</sup>) ⇒ 2*n*log*n* ⇒ *n*log*n*
+  * 4*n* + 5 ⇒ 4*n* ⇒ ***n***
+  * 0.5*n*log*n* - 2*n* + 7 ⇒ **0.5*n*log*n***
+  * 2<sup>*n*</sup> + *n*<sup>3</sup> + 3*n* ⇒ 2<sup>*n*</sup> ⇒ **2<sup>*n*</sup>**
+  * *n*log(*n*<sup>2</sup>) ⇒ 2*n*log*n* ⇒ ***n*log*n***
 
 Examples:
   * 10,000*n*<sup>2</sup> + 25*n* ∈ Θ(*n*<sup>2</sup>)
