@@ -17,8 +17,8 @@ n = input size
 * The input size is indicated with the number n; sometimes there can be multiple inputs.
 ```
 
-  * Ask them to stand up and wave: T(n) = 60
-  * Ask everyone in the audience, one at a time, if their name is the same as the given: T(n) = 7n+4
+  * Ask them to stand up and wave: *T(n)* = 60
+  * Ask everyone in the audience, one at a time, if their name is the same as the given: *T(n)* = 7*n* + 4
 
 #### 3. Asymptotic Analysis
 
@@ -29,12 +29,26 @@ There are different metrics of algorithms:
 
 Running time is a function of *n* such as:
   
-  * T(n) = 4*n* + 5
-  * T(n) = 0.5*n*log*n* - 2*n* + 7
-  * T(n) = 2<sup>*n*</sup> + n<sup>3</sup> + 3*n*
+  * *T(n)* = 4*n* + 5
+  * *T(n)* = 0.5*n*log*n* - 2*n* + 7
+  * *T(n)* = 2<sup>*n*</sup> + *n*<sup>3</sup> + 3*n*
 
 Asymptotic Analysis hacks:
 Eliminate low order terms, and then constant coefficients.
   
-  * 4n + 5 ⇒ 4n ⇒ n
-  * 0.5*n*log*n* - 2n + 7 ⇒ 0.5*n*log*n*
+  * 4*n* + 5 ⇒ 4*n* ⇒ *n*
+  * 0.5*n*log*n* - 2*n* + 7 ⇒ 0.5*n*log*n*
+  * 2<sup>*n*</sup> + *n*<sup>3</sup> + 3*n* ⇒ 2<sup>*n*</sup> ⇒ 2<sup>*n*</sup>
+  * *n*log(*n*<sup>2</sup>) ⇒ 2*n*log*n* ⇒ *n*log*n*
+
+O-Notation (Classification for running time)
+
+  *T(n)* ∈ *O(f(n))* if there are constants *c* and *n*<sub>0</sub> such that *T(n)* ≤ *c∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
+  * *T(n)* is bounded from above by *c∙f(n)*
+  * i.e. the growth of *T(n)* is no faster than *f(n)*
+
+  *T(n)* ∈ *Ω(f(n))* if there are constants *d* and *n*<sub>0</sub> such that *T(n)* ≤ *d∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
+  * *T(n)* is bounded from below by *d∙f(n)*
+  * i.e. the growth of *T(n)* is no slower than *f(n)*
+
+  
