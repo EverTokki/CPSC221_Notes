@@ -10,15 +10,15 @@
 #include <iostream> //allows for printing
 
  int main() {
- 	int max = 0;
+ 	  int max = 0;
 
-  //declare an array below:
- 	int arr[] = {6, 1, 3, 7, 5};
+    //declare an array below:
+ 	  int arr[] = {6, 1, 3, 7, 5};
 
-  //find highest value in array:
- 	for (int = 0; i < 5; i++){
- 		if (arr[i] > max) {
- 			max = arr[i];
+    //find highest value in array:
+ 	  for (int = 0; i < 5; i++){
+ 		  if (arr[i] > max) {
+ 		  	max = arr[i];
  		}
  	}
 
@@ -68,7 +68,7 @@ When we create a class in c++ we want to separate 2 things:
 
 class Sphere {
 public:
-	// this is accessible from other classes.
+  // this is accessible from other classes.
 	double getRadius();
 	void setRadius(double r);
 	double getVolume();
