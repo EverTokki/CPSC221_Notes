@@ -49,7 +49,7 @@ Running time is a function of *n* such as:
 
 ![Theta notation graph](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/theta.png "Theta")
 
-  *T(n)* ∈ Θ(*f(n)*) if T(n)* ∈ *O(f(n))* and *T(n)* ∈ Ω(*f(n)*)
+  *T(n)* ∈ Θ(*f(n)*) if *T(n)* ∈ *O(f(n))* and *T(n)* ∈ Ω(*f(n)*)
   * *T(n)* is bounded from above and below by *f(n)*
   * i.e. *T(n)* grows at the same rate as *f(n)*
 
