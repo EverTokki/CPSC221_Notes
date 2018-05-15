@@ -8,7 +8,8 @@
 
   * Abstract Data Type (ADT): A collection of data and a set of operations that can be performed on the collection so that the data behave in a well-defined way
 
-#### 2. Suppose we have a collection of people at a concert. How are we going to find a specific person, given their name?
+#### 2. Suppose we have a collection of people at a concert. 
+How are we going to find a specific person, given their name?
 
 ```
 T(n) = Running time
@@ -21,17 +22,13 @@ n = input size
 
   * Ask everyone in the audience, one at a time, if their name is the same as the given: T(n) = 7n+4
 
-
+#### 3. Asymptotic Analysis
 
 There are different metrics of algorithms:
 
-* Time complexity: How long does it take to complete the given task?
+  * Time complexity: How long does it take to complete the given task?
 
-* Space complexicity: How much memory does it take to execute the task?
-
-
-
-#### 3. Asymptotic Analysis
+  * Space complexicity: How much memory does it take to execute the task?
 
 Running time is a function of *n* such as:
   
