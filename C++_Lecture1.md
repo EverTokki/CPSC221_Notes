@@ -53,10 +53,14 @@ When we create a class in c++ we want to separate 2 things:
 
 #### Encapsulation principles: C++ Convention
   * sphere.h
-    APIin.h
+
+    *APIin.h*
+
     Define what other programmers will be able to use
   * sphere.cpp
-  	implementation
+
+  	*implementation*
+
   	The implementation of the code
 
 ### 3. Our first class
