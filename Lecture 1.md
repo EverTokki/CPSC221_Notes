@@ -14,12 +14,13 @@
 T(n) = Running time
 n = input size
 
-*The input size is indicated with the number n; sometimes there can be multiple inputs.
+* The input size is indicated with the number n; sometimes there can be multiple inputs.
 ```
 
   * Ask them to stand up and wave: T(n) = 60
 
   * Ask everyone in the audience, one at a time, if their name is the same as the given: T(n) = 7n+4
+
 
 
 There are different metrics of algorithms:
