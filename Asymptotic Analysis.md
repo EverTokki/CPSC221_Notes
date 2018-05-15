@@ -1,4 +1,4 @@
-# Lecture 1: Overview and Asymptotic Analysis
+# Asymptotic Analysis
 
 #### 1. Definitions
 
@@ -33,7 +33,7 @@ Running time is a function of *n* such as:
   * *T(n)* = 0.5*n*log*n* - 2*n* + 7
   * *T(n)* = 2<sup>*n*</sup> + *n*<sup>3</sup> + 3*n*
 
-O-Notation (Classification for running time)
+##### O-Notation (Classification for running time)
 
 // insert graph here
   *T(n)* ∈ *O(f(n))* if there are constants *c* and *n*<sub>0</sub> such that *T(n)* ≤ *c∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
@@ -50,7 +50,7 @@ O-Notation (Classification for running time)
   * *T(n)* is bounded from above and below by *f(n)*
   * i.e. *T(n)* grows at the same rate as *f(n)*
 
-Asymptotic Analysis hacks:
+##### Asymptotic Analysis hacks:
 *Eliminate low order terms, and then constant coefficients.*
   
   * 4*n* + 5 ⇒ 4*n* ⇒ *n*
@@ -66,7 +66,7 @@ Examples:
   * *n*<sup>3</sup> + 4 ∈ *O(n<sup>4</sup>)*, but not Θ*(n<sup>4</sup>)*
   * *n*<sup>3</sup> + 4 ∈ Ω*(n<sup>2</sup>)*, but not Θ*(n<sup>2</sup>)*
 
-Typical growth rates in order
+##### Typical growth rates in order
 | Name | Big-O Notation | Remarks |
 |:---:|:---:|:---:|
 |Constant|*O*(1)||
@@ -80,3 +80,28 @@ Typical growth rates in order
 |Cubic|*O*(*n*<s>3</s>)||
 |Polynomial|*O*(*n*<s>*k*</s>)|*k* is a constant; "tractable"|
 |Exponential|*O*(*c*<s>*n*</s>)|*c* is a constant > 0; "intractable"|
+
+##### Dominance
+We can look at the dominant term to guess at a big-O growth rate. 
+e.g. *T(n) = 2*n*<sup>2</sup> + 600*n* + 60000
+  * Up to *n* = 100, the constant term dominates
+  * Between *n* = 100 and *n* = 300, the linear term dominates
+  * Beyond *n* = 300, the quadratic term dominates, *T(n)* ∈ *O*(*n*<sup>2</sup>)
+
+##### Analyzing Code
+*Types of analysis*
+
+  * Bound flavour
+    * Upper bound (O)
+    * Lower bound (Ω)
+    * Asymptotically tight (Θ)
+
+  * Analysis case
+    * Worst case (adversary)
+    * Average case
+    * Best case / "lucky" case
+    * "common" case
+
+  * Analysis quality
+    * Loose bound (any true analysis)
+    * Tight boud (no better "meaningful" bound that is asymptotically different)
