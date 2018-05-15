@@ -87,7 +87,7 @@ Examples:
 #### Dominance
 We can look at the dominant term to guess at a big-O growth rate. 
 
-e.g. *T(n) = 2*n<sup>2</sup>* + 600*n* + 60000
+e.g. *T(n) = 2*n*<sup>2</sup> + 600*n* + 60000
   * Up to *n* = 100, the constant term dominates
   * Between *n* = 100 and *n* = 300, the linear term dominates
   * Beyond *n* = 300, the quadratic term dominates, *T(n)* ∈ *O*(*n*<sup>2</sup>)
