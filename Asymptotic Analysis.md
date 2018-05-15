@@ -36,16 +36,19 @@ Running time is a function of *n* such as:
 #### O-Notation (Classification for running time)
 
 ![Big-O notation graph](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/big_o.png "Big-O")
+
   *T(n)* ∈ *O(f(n))* if there are constants *c* and *n*<sub>0</sub> such that *T(n)* ≤ *c∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
   * *T(n)* is bounded from above by *c∙f(n)*
   * i.e. the growth of *T(n)* is no faster than *f(n)*
 
 ![Big-Omega notation graph](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/big_omega.png "Big-Omega")
+
   *T(n)* ∈ Ω*(f(n))* if there are constants *d* and *n*<sub>0</sub> such that *T(n)* ≤ *d∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
   * *T(n)* is bounded from below by *d∙f(n)*
   * i.e. the growth of *T(n)* is no slower than *f(n)*
 
 ![Theta notation graph](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/theta.png "Theta")
+
   *T(n)* ∈ Θ*(f(n))* if T(n)* ∈ *O(f(n))* and T(n)* ∈ Ω*(f(n))*
   * *T(n)* is bounded from above and below by *f(n)*
   * i.e. *T(n)* grows at the same rate as *f(n)*
@@ -59,12 +62,12 @@ Running time is a function of *n* such as:
   * *n*log(*n*<sup>2</sup>) ⇒ 2*n*log*n* ⇒ *n*log*n*
 
 Examples:
-  * 10,000*n*<sup>2</sup> + 25*n* ∈ Θ*(n<sup>2</sup>)*
-  * 10<sup>-10</sup>*n*<sup>2</sup> ∈ Θ*(n<sup>2</sup>)*
+  * 10,000*n*<sup>2</sup> + 25*n* ∈ Θ(*n*<sup>2</sup>)
+  * 10<sup>-10</sup>*n*<sup>2</sup> ∈ Θ(**n<sup>2</sup>)
   * *n*log*n* ∈ *O(n<sup>2</sup>)*
-  * *n*log*n* ∈ Ω*(n)*
-  * *n*<sup>3</sup> + 4 ∈ *O(n<sup>4</sup>)*, but not Θ*(n<sup>4</sup>)*
-  * *n*<sup>3</sup> + 4 ∈ Ω*(n<sup>2</sup>)*, but not Θ*(n<sup>2</sup>)*
+  * *n*log*n* ∈ Ω(*n*)
+  * *n*<sup>3</sup> + 4 ∈ *O(n<sup>4</sup>)*, but not Θ(*n*<sup>4</sup>)
+  * *n*<sup>3</sup> + 4 ∈ Ω(*n*<sup>2</sup>), but not Θ(*n*<sup>2</sup>)
 
 #### Typical growth rates in order
 | Name | Big-O Notation | Remarks |
@@ -83,7 +86,8 @@ Examples:
 
 #### Dominance
 We can look at the dominant term to guess at a big-O growth rate. 
-e.g. *T(n) = 2*n*<sup>2</sup> + 600*n* + 60000
+
+e.g. *T(n) = 2*n<sup>2</sup>* + 600*n* + 60000
   * Up to *n* = 100, the constant term dominates
   * Between *n* = 100 and *n* = 300, the linear term dominates
   * Beyond *n* = 300, the quadratic term dominates, *T(n)* ∈ *O*(*n*<sup>2</sup>)
