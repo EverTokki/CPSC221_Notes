@@ -97,7 +97,10 @@ double Sphere::getVolume() {
 	return = (4/3) * 3.14 * radius^3;
 }
 ```
-```ifndef: if not defined 
+
+```
+Note: 
+ifndef = if not defined 
 (this acts like an if for the compiler)
 
 has this already been defined(aka. included in a cpp file)?if not, include it
