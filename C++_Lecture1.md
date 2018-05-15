@@ -36,6 +36,7 @@
    4. memory location
 
  And every variable is one of two types:
+ 
  | Primitive | Complex(Object) |
  | :--- | :--- |
  |int myFavoriteInt;|Sphere myFavoriteSphere;|
