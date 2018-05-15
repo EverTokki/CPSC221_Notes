@@ -54,12 +54,8 @@ When we create a class in c++ we want to separate 2 things:
 #### Encapsulation principles: C++ Convention
   * sphere.h
 
-    *APIin.h*
-
     Define what other programmers will be able to use
   * sphere.cpp
-
-  	*implementation*
 
   	The implementation of the code
 
@@ -84,6 +80,13 @@ private:
 
 #endif
 ```
+```
+Note: 
+ifndef = if not defined 
+(this acts like an if for the compiler)
+
+Has this already been defined(aka. included in a cpp file)? If not, include it
+```
 
 **sphere.cpp**
 ```cpp
@@ -100,14 +103,6 @@ void Sphere::setRadius(double r) {
 double Sphere::getVolume() {
 	return = (4/3) * 3.14 * radius^3;
 }
-```
-
-```
-Note: 
-ifndef = if not defined 
-(this acts like an if for the compiler)
-
-Has this already been defined(aka. included in a cpp file)? If not, include it
 ```
 
 ### 4. Key Concepts in C++ Classes:
