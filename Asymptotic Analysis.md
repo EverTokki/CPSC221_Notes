@@ -59,7 +59,7 @@ Running time is a function of *n* such as:
   * 4*n* + 5 ⇒ 4*n* ⇒ ***n***
   * 0.5*n*log*n* - 2*n* + 7 ⇒ **0.5*n*log*n***
   * 2<sup>*n*</sup> + *n*<sup>3</sup> + 3*n* ⇒ 2<sup>*n*</sup> ⇒ **2<sup>*n*</sup>**
-  * *n*log(*n*<sup>2</sup>) ⇒ 2*n*log*n* ⇒ ***n*log*n***
+  * *n*log(*n*<sup>2</sup>) ⇒ 2*n*log*n* ⇒ ** *n*log*n* **
 
 Examples:
   * 10,000*n*<sup>2</sup> + 25*n* ∈ Θ(*n*<sup>2</sup>)
@@ -70,19 +70,19 @@ Examples:
   * *n*<sup>3</sup> + 4 ∈ Ω(*n*<sup>2</sup>), but not Θ(*n*<sup>2</sup>)
 
 #### Typical growth rates in order
-| Name | Big-O Notation | Remarks |
-|:---:|:---:|:---:|
-|Constant|*O*(1)||
-|Logarithmic|*O*(log*n*)|log<sub>k</sub>*n*, log(*n*<sup>2</sup>) ∈ *O*(log*n*)|
-|Poly-log|*O*((log*n*)<sup>k</sup>)|
-|Sublinear|*O(n<sup>c</sup>)*|*c* is a constant, 0 < *c* < 1|
-|Linear|*O(n)*||
-|Log-linear|*O*(*n*log*n*)||
-|Superlinear|*O*(*n*<sup>1 + *c*</sup>)|*c* is a constant, 0 < *c* < 1|
-|Quadratic|*O*(*n*<s>2</s>)||
-|Cubic|*O*(*n*<s>3</s>)||
-|Polynomial|*O*(*n*<s>*k*</s>)|*k* is a constant; "tractable"|
-|Exponential|*O*(*c*<s>*n*</s>)|*c* is a constant > 0; "intractable"|
+|    Name   |      Big-O Notation                     |      Remarks     |
+|:---:      |           :---:                         |       :---:      |
+|Constant   |      *O*(1)                             |                  |
+|Logarithmic|      *O*(log*n*)                        |log<sub>k</sub>*n*, log(*n*<sup>2</sup>) ∈ *O*(log*n*)|
+|Poly-log   |      *O*((log*n*)<sup>k</sup>)          |                  |
+|Sublinear  |      *O(n<sup>c</sup>)*                 |*c* is a constant, 0 < *c* < 1|
+|Linear     |      *O(n)*                             |                  |
+|Log-linear |      *O*(*n*log*n*)                     |                  |
+|Superlinear|      *O*(*n*<sup>1 + *c*</sup>)         |*c* is a constant, 0 < *c* < 1|
+|Quadratic  |      *O*(*n*<sup>2</sup>)               |                  |
+|Cubic      |      *O*(*n*<sup>3</sup>)               |                  |
+|Polynomial |      *O*(*n*<sup>*k*</sup>)             |*k* is a constant; "tractable"|
+|Exponential|      *O*(*c*<sup>*n*</sup>)             |*c* is a constant > 0; "intractable"|
 
 #### Dominance
 We can look at the dominant term to guess at a big-O growth rate. 
