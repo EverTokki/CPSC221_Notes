@@ -35,14 +35,17 @@ Running time is a function of *n* such as:
 
 O-Notation (Classification for running time)
 
+// insert graph here
   *T(n)* ∈ *O(f(n))* if there are constants *c* and *n*<sub>0</sub> such that *T(n)* ≤ *c∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
   * *T(n)* is bounded from above by *c∙f(n)*
   * i.e. the growth of *T(n)* is no faster than *f(n)*
 
+// insert graph here
   *T(n)* ∈ Ω*(f(n))* if there are constants *d* and *n*<sub>0</sub> such that *T(n)* ≤ *d∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
   * *T(n)* is bounded from below by *d∙f(n)*
   * i.e. the growth of *T(n)* is no slower than *f(n)*
 
+// insert graph here
   *T(n)* ∈ Θ*(f(n))* if T(n)* ∈ *O(f(n))* and T(n)* ∈ Ω*(f(n))*
   * *T(n)* is bounded from above and below by *f(n)*
   * i.e. *T(n)* grows at the same rate as *f(n)*
@@ -63,4 +66,17 @@ Examples:
   * *n*<sup>3</sup> + 4 ∈ *O(n<sup>4</sup>)*, but not Θ*(n<sup>4</sup>)*
   * *n*<sup>3</sup> + 4 ∈ Ω*(n<sup>2</sup>)*, but not Θ*(n<sup>2</sup>)*
 
-
+Typical growth rates in order
+| Name | Big-O Notation | Remarks |
+|:---:|:---:|:---:|
+|Constant|*O*(1)||
+|Logarithmic|*O*(log*n*)|log<sub>k</sub>*n*, log(*n*<sup>2</sup>) ∈ *O*(log*n*)|
+|Poly-log|*O*((log*n*)<sup>k</sup>)|
+|Sublinear|*O(n<sup>c</sup>)*|*c* is a constant, 0 < *c* < 1|
+|Linear|*O(n)*||
+|Log-linear|*O*(*n*log*n*)||
+|Superlinear|*O*(*n*<sup>1 + *c*</sup>)|*c* is a constant, 0 < *c* < 1|
+|Quadratic|*O*(*n*<s>2</s>)||
+|Cubic|*O*(*n*<s>3</s>)||
+|Polynomial|*O*(*n*<s>*k*</s>)|*k* is a constant; "tractable"|
+|Exponential|*O*(*c*<s>*n*</s>)|*c* is a constant > 0; "intractable"|
