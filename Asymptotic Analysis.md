@@ -43,13 +43,13 @@ Running time is a function of *n* such as:
 
 ![Big-Omega notation graph](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/big_omega.png "Big-Omega")
 
-  *T(n)* ∈ Ω*(f(n))* if there are constants *d* and *n*<sub>0</sub> such that *T(n)* ≤ *d∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
+  *T(n)* ∈ Ω(*f(n)*) if there are constants *d* and *n*<sub>0</sub> such that *T(n)* ≤ *d∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
   * *T(n)* is bounded from below by *d∙f(n)*
   * i.e. the growth of *T(n)* is no slower than *f(n)*
 
 ![Theta notation graph](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/theta.png "Theta")
 
-  *T(n)* ∈ Θ*(f(n))* if T(n)* ∈ *O(f(n))* and T(n)* ∈ Ω*(f(n))*
+  *T(n)* ∈ Θ(*f(n)*) if T(n)* ∈ *O(f(n))* and *T(n)* ∈ Ω(*f(n)*)
   * *T(n)* is bounded from above and below by *f(n)*
   * i.e. *T(n)* grows at the same rate as *f(n)*
 
@@ -63,7 +63,7 @@ Running time is a function of *n* such as:
 
 Examples:
   * 10,000*n*<sup>2</sup> + 25*n* ∈ Θ(*n*<sup>2</sup>)
-  * 10<sup>-10</sup>*n*<sup>2</sup> ∈ Θ(**n<sup>2</sup>)
+  * 10<sup>-10</sup>*n*<sup>2</sup> ∈ Θ(*n*<sup>2</sup>)
   * *n*log*n* ∈ *O(n<sup>2</sup>)*
   * *n*log*n* ∈ Ω(*n*)
   * *n*<sup>3</sup> + 4 ∈ *O(n<sup>4</sup>)*, but not Θ(*n*<sup>4</sup>)
