@@ -9,7 +9,7 @@
   * Abstract Data Type (ADT): A collection of data and a set of operations that can be performed on the collection so that the data behave in a well-defined way
 
 #### 2. Suppose we have a collection of people at a concert. 
-How are we going to find a specific person, given their name?
+####How are we going to find a specific person, given their name?
 
 ```
 T(n) = Running time
