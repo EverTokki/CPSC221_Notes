@@ -60,6 +60,7 @@ When we create a class in c++ we want to separate 2 things:
   	The implementation of the code
 
 Our first class:
+
 **sphere.h**
 ```cpp
 #ifndef SPHERE_H_
