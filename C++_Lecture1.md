@@ -103,7 +103,7 @@ Note:
 ifndef = if not defined 
 (this acts like an if for the compiler)
 
-has this already been defined(aka. included in a cpp file)?if not, include it
+Has this already been defined(aka. included in a cpp file)? If not, include it
 ```
 
 #### Key Concepts in C++ Classes:
