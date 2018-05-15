@@ -1,6 +1,6 @@
 # Asymptotic Analysis
 
-#### 1. Definitions
+### 1. Definitions
 
   * Algorithm: A sequence of steps to produce a solution to a problem, given a set of inputs
 
@@ -8,7 +8,7 @@
 
   * Abstract Data Type (ADT): A collection of data and a set of operations that can be performed on the collection so that the data behave in a well-defined way
 
-#### 2. Suppose we have a collection of people at a concert. How are we going to find a specific person, given their name?
+### 2. Suppose we have a collection of people at a concert. How are we going to find a specific person, given their name?
 
 ```
 T(n) = Running time
@@ -20,7 +20,7 @@ n = input size
   * Ask them to stand up and wave: *T(n)* = 60
   * Ask everyone in the audience, one at a time, if their name is the same as the given: *T(n)* = 7*n* + 4
 
-#### 3. Asymptotic Analysis
+### 3. Asymptotic Analysis
 
 There are different metrics of algorithms:
 
@@ -33,24 +33,24 @@ Running time is a function of *n* such as:
   * *T(n)* = 0.5*n*log*n* - 2*n* + 7
   * *T(n)* = 2<sup>*n*</sup> + *n*<sup>3</sup> + 3*n*
 
-##### O-Notation (Classification for running time)
+#### O-Notation (Classification for running time)
 
-// insert graph here
+![Big-O notation graph](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/big_o.png "Big-O")
   *T(n)* ∈ *O(f(n))* if there are constants *c* and *n*<sub>0</sub> such that *T(n)* ≤ *c∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
   * *T(n)* is bounded from above by *c∙f(n)*
   * i.e. the growth of *T(n)* is no faster than *f(n)*
 
-// insert graph here
+![Big-Omega notation graph](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/big_omega.png "Big-Omega")
   *T(n)* ∈ Ω*(f(n))* if there are constants *d* and *n*<sub>0</sub> such that *T(n)* ≤ *d∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
   * *T(n)* is bounded from below by *d∙f(n)*
   * i.e. the growth of *T(n)* is no slower than *f(n)*
 
-// insert graph here
+![Theta notation graph](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/theta.png "Theta")
   *T(n)* ∈ Θ*(f(n))* if T(n)* ∈ *O(f(n))* and T(n)* ∈ Ω*(f(n))*
   * *T(n)* is bounded from above and below by *f(n)*
   * i.e. *T(n)* grows at the same rate as *f(n)*
 
-##### Asymptotic Analysis hacks:
+#### Asymptotic Analysis hacks:
 *Eliminate low order terms, and then constant coefficients.*
   
   * 4*n* + 5 ⇒ 4*n* ⇒ *n*
@@ -66,7 +66,7 @@ Examples:
   * *n*<sup>3</sup> + 4 ∈ *O(n<sup>4</sup>)*, but not Θ*(n<sup>4</sup>)*
   * *n*<sup>3</sup> + 4 ∈ Ω*(n<sup>2</sup>)*, but not Θ*(n<sup>2</sup>)*
 
-##### Typical growth rates in order
+#### Typical growth rates in order
 | Name | Big-O Notation | Remarks |
 |:---:|:---:|:---:|
 |Constant|*O*(1)||
@@ -81,14 +81,14 @@ Examples:
 |Polynomial|*O*(*n*<s>*k*</s>)|*k* is a constant; "tractable"|
 |Exponential|*O*(*c*<s>*n*</s>)|*c* is a constant > 0; "intractable"|
 
-##### Dominance
+#### Dominance
 We can look at the dominant term to guess at a big-O growth rate. 
 e.g. *T(n) = 2*n*<sup>2</sup> + 600*n* + 60000
   * Up to *n* = 100, the constant term dominates
   * Between *n* = 100 and *n* = 300, the linear term dominates
   * Beyond *n* = 300, the quadratic term dominates, *T(n)* ∈ *O*(*n*<sup>2</sup>)
 
-##### Analyzing Code
+#### Analyzing Code
 *Types of analysis*
 
   * Bound flavour
