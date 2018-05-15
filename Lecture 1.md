@@ -33,22 +33,34 @@ Running time is a function of *n* such as:
   * *T(n)* = 0.5*n*log*n* - 2*n* + 7
   * *T(n)* = 2<sup>*n*</sup> + *n*<sup>3</sup> + 3*n*
 
-Asymptotic Analysis hacks:
-Eliminate low order terms, and then constant coefficients.
-  
-  * 4*n* + 5 ⇒ 4*n* ⇒ *n*
-  * 0.5*n*log*n* - 2*n* + 7 ⇒ 0.5*n*log*n*
-  * 2<sup>*n*</sup> + *n*<sup>3</sup> + 3*n* ⇒ 2<sup>*n*</sup> ⇒ 2<sup>*n*</sup>
-  * *n*log(*n*<sup>2</sup>) ⇒ 2*n*log*n* ⇒ *n*log*n*
-
 O-Notation (Classification for running time)
 
   *T(n)* ∈ *O(f(n))* if there are constants *c* and *n*<sub>0</sub> such that *T(n)* ≤ *c∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
   * *T(n)* is bounded from above by *c∙f(n)*
   * i.e. the growth of *T(n)* is no faster than *f(n)*
 
-  *T(n)* ∈ *Ω(f(n))* if there are constants *d* and *n*<sub>0</sub> such that *T(n)* ≤ *d∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
+  *T(n)* ∈ Ω*(f(n))* if there are constants *d* and *n*<sub>0</sub> such that *T(n)* ≤ *d∙f(n)* for all *n* ≥ *n*<sub>0</sub> 
   * *T(n)* is bounded from below by *d∙f(n)*
   * i.e. the growth of *T(n)* is no slower than *f(n)*
 
+  *T(n)* ∈ Θ*(f(n))* if T(n)* ∈ *O(f(n))* and T(n)* ∈ Ω*(f(n))*
+  * *T(n)* is bounded from above and below by *f(n)*
+  * i.e. *T(n)* grows at the same rate as *f(n)*
+
+Asymptotic Analysis hacks:
+*Eliminate low order terms, and then constant coefficients.*
   
+  * 4*n* + 5 ⇒ 4*n* ⇒ *n*
+  * 0.5*n*log*n* - 2*n* + 7 ⇒ 0.5*n*log*n*
+  * 2<sup>*n*</sup> + *n*<sup>3</sup> + 3*n* ⇒ 2<sup>*n*</sup> ⇒ 2<sup>*n*</sup>
+  * *n*log(*n*<sup>2</sup>) ⇒ 2*n*log*n* ⇒ *n*log*n*
+
+Examples:
+  * 10,000*n*<sup>2</sup> + 25*n* ∈ Θ*(n<sup>2</sup>)*
+  * 10<sup>-10</sup>*n*<sup>2</sup> ∈ Θ*(n<sup>2</sup>)*
+  * *n*log*n* ∈ *O(n<sup>2</sup>)*
+  * *n*log*n* ∈ Ω*(n)*
+  * *n*<sup>3</sup> + 4 ∈ *O(n<sup>4</sup>)*, but not Θ*(n<sup>4</sup>)*
+  * *n*<sup>3</sup> + 4 ∈ Ω*(n<sup>2</sup>)*, but not Θ*(n<sup>2</sup>)*
+
+
