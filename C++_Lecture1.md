@@ -11,8 +11,11 @@
 
  int main() {
  	int max = 0;
+
+  //declare an array below:
  	int arr[] = {6, 1, 3, 7, 5};
 
+  //find highest value in array:
  	for (int = 0; i < 5; i++){
  		if (arr[i] > max) {
  			max = arr[i];
@@ -33,7 +36,7 @@
    4. memory location
 
  And every variable is one of two types:
- |Primitive||Complex(object)|
+ |Primitive|Complex(object)|
  |:---|:---|
  |int myFavoriteInt;|Sphere myFavoriteSphere;|
  |char grade = 'A';|Cube rubix;|
