@@ -49,7 +49,7 @@
 #### Big Idea: Encapsulation
 When we create a class in c++ we want to separate 2 things:
   * the API: **WHAT** is the class supposed to do?
-  * the Implementation: **HOW** does it do it?|
+  * the Implementation: **HOW** does it do it?
 
 #### Encapsulation principles: C++ Convention
   * sphere.h
