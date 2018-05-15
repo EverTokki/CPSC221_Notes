@@ -36,8 +36,8 @@
    4. memory location
 
  And every variable is one of two types:
- |Primitive|Complex(object)|
- |:---|:---|
+ | Primitive | Complex(object) |
+ | :--- | :--- |
  |int myFavoriteInt;|Sphere myFavoriteSphere;|
  |char grade = 'A';|Cube rubix;|
  |double gamma = 0.653;|Grade courseGrade;|
