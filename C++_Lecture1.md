@@ -110,13 +110,14 @@ Has this already been defined(aka. included in a cpp file)? If not, include it
 Every class will be made up of common key pieces:
 
   1. Inclusion guards
-  * sphere.h :1 :2 and :17
+  sphere.h :1 :2 and :17
   2. class definition (ends with ;)
-  * sphere.h :4 ... :15
+  sphere.h :4 ... :15
 
   3. including header file
-  * sphere.cpp :1
+  sphere.cpp :1
   4. double colon is scope resolution operator
-  * sphere.cpp :3
+  sphere.cpp :3
+  
   ⇒ This signifies that the method belongs to the class specified before the double colon
 
