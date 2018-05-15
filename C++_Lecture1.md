@@ -59,7 +59,7 @@ When we create a class in c++ we want to separate 2 things:
   	implementation
   	The implementation of the code
 
-#### Our first class:
+### 3. Our first class
 
 **sphere.h**
 ```cpp
@@ -106,7 +106,7 @@ ifndef = if not defined
 Has this already been defined(aka. included in a cpp file)? If not, include it
 ```
 
-#### Key Concepts in C++ Classes:
+### 4. Key Concepts in C++ Classes:
 Every class will be made up of common key pieces:
 
   1. Inclusion guards
