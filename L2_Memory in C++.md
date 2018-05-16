@@ -1,6 +1,7 @@
 # Memory in C++
 
 A look at memory
+[Lecture slide]
 
 ### 2. Variable Scope
 #### What does scope mean?
