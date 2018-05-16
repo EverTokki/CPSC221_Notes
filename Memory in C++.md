@@ -44,4 +44,20 @@ When we use the `new` keyword we allocate memory on the heap.
 	* Makes sure we have enough memory to instantiate variables
 	* Let's create this memory in the heap and I'm going to keep it there unless the programmer explicitly uses the keyword `delete` which frees up the allocated space.
 
+	* Memory leaks: We have no way to free up that space, which is memory that's sitting there indefinitely, unable to be freed
+
 The only way to free heap memory is the `delete` keyword
+
+#### Stack vs. Heap
+Stack eventually goes back down;
+
+Thing is, when we're working with the heap, we can deallocate chunks of memory that we are not using.
+
+Now we have fragmentation- gaps made by freeing memory in some spaces.
+
+  Requires more complicated and thus more costly allocation and deallocation to avoid fragmentation.
+
+
+Stack is simple, cheap allocation, Why use stack over heap?
+  * Lasts longer- depends on the scope we want to use in our program
+  * For many programs, we need both. If we only need a variable for a function, then declare it locally (stack).
