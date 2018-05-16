@@ -32,7 +32,7 @@ Default Constructor:
   Automatic; assign "random" (junk) values to variables if you dont initialize them ourselves.
 
  
-#### Custom Default Constructor
+#### Custom Default Constructor, Custom Non-Default Constructor
 
 **sphere.h**
 ```cpp
@@ -58,10 +58,12 @@ private:
 ```cpp
 #include "sphere.h"
 
+// Custom default constructor
 Sphere::Sphere() {
 	r = 0;
 }
 
+//Custom non-default constructor
 Sphere::Sphere(double r) {
 	this->r = r;
 }
@@ -74,31 +76,9 @@ void Sphere::setRadius(double r) {
 	radius = r;
 }
 ```
-
-#### Custom, Non-Default Constructors
-
-A look ay memory
-
-### 2. Variable Scope
-#### What does scope mean?
-
-  Accessibility or lifetime of a variable
-
-```cpp
-void fn1(){
-	int x = 0;
-	int y = x+1;
-}
-
-void fn2() {
-	int z = 0;
-	fn1(); 
-	// at this point we will not have access to x, y anymore
-}
+```
+As soon as we define custom contructor(s), we must use one of our defined constructors.
 ```
 
-#### Lifetime 
 
-  Allocated when a procedure starts, deallocated (freed) when procedure returns
 
-  Each function has their own private copy of their own local variables
