@@ -21,7 +21,7 @@ void fn2() {
 }
 ```
 
-#### Lifetime 
+### 3. Lifetime 
 
   Allocated when a procedure starts, deallocated (freed) when procedure returns
 
@@ -38,7 +38,7 @@ After a function is returned, the memory that was used for the data is freed and
 
 If a value of a variable is not initialized, the program might just bring the junk that was stored in *that* memory (where the new variable sits) which is the data that was used at that specific memory space right before it was deallocated.
 
-#### Dynamic Allocation
+### 4. Dynamic Allocation
 
 When we use the `new` keyword we allocate memory on the heap.
 	* We use this to create a new instance of the object (and call its constructor)
@@ -50,7 +50,7 @@ When we use the `new` keyword we allocate memory on the heap.
 
 The only way to free heap memory is the `delete` keyword
 
-#### Stack vs. Heap
+###  5. Stack vs. Heap
 
 Stack eventually goes back down;
 
