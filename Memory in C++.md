@@ -29,9 +29,10 @@ void fn2() {
 A stackframe for all data needed in fn1
  * int a is in here!
 
- -> fn2() -> 
+ -> fn2() -> [!insert graphic here]
 
 Data is stacked on top of functions
+
 After a function is returned, the memory that was used for the data is freed and deallocated. Now that memory can be used for something else, other data.
 
 If a value of a variable is not initialized, the program might just bring the junk that was stored in *that* memory (where the new variable sits) which is the data that was used at that specific memory space right before it was deallocated.
@@ -49,6 +50,7 @@ When we use the `new` keyword we allocate memory on the heap.
 The only way to free heap memory is the `delete` keyword
 
 #### Stack vs. Heap
+
 Stack eventually goes back down;
 
 Thing is, when we're working with the heap, we can deallocate chunks of memory that we are not using.
