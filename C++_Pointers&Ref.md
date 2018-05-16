@@ -27,7 +27,7 @@ Unlike reference variables, which alias another variable's memory, pointers are 
 
 Here are things to remember on pointers and reference variables:
 
-| Pointers | Reference Variables |
+| Pointers `(*v)` | Reference Variables `(&v)` |
 | :---: | :---: |
 | Have their own memory | Don't have their own memory |
 | Store the address of some data | Alias an existing variable |
