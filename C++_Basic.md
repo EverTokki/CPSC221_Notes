@@ -27,7 +27,7 @@
  }
  ```
 
- ### 2. Variables and Classes in C++
+### 2. Variables and Classes in C++
 
  Every variable is defined by four properties:
    1. type

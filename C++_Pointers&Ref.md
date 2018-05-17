@@ -54,7 +54,8 @@ Indirection Operators:
  2. `*v` : "Give me the data" : Dereferencing (following) a pointer to where that data is pointing to
  3. `v->` : same as `(*v).getRadius` :
 
- Referring back to `main.cpp` above : `(*ptr).radius = s.radius;` // under the circumstances radius is a public variable
+ Referring back to `main.cpp` above : `(*ptr).radius = s.radius; 
+ // under the circumstances radius is a public variable`
 
 
  You don't want to return the local address of local variables as the function will deallocate the following memory when the function returns, and it will be unaccessible after it goes out of scope.
