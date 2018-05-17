@@ -37,11 +37,11 @@
 
  And every variable is one of two types:
 
- | Primitive | Complex(Object) |
- | :--- | :--- |
- |int myFavoriteInt;|Sphere myFavoriteSphere;|
- |char grade = 'A';|Cube rubix;|
- |double gamma = 0.653;|Grade courseGrade;|
+ |        Primitive   |      Complex(Object)     |
+ | :---               |     :---                 |
+ | int myFavoriteInt; | Sphere myFavoriteSphere; |
+ | char grade = 'A';  |  Cube rubix;             |
+ | double gamma = 0.653; |    Grade courseGrade; |
 
 #### **Creating New Types**
  In data structures, we will be learning and creating new types of structures to store data.
