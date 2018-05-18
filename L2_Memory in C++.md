@@ -66,8 +66,7 @@ void fn1() {
 ```
 
   * A step-by-step breakdown:
-    * A stackframe for all data needed in fn1 is created
-	  *`int a` is in here!*
+    * A stackframe for all data needed in fn1 is created - `int a` is in here!*
 	[!Graphic 1]
 	* fn2 is called, and a stackframe for all data needed in fn2 is created
 	[!Graphic 2]
@@ -77,7 +76,7 @@ void fn1() {
 	[!Graphic 4]
 	* fn4 is called, and a stackframe for all data needed in fn4 is called on the memory space previously freed from fn3
 	[!Graphic 5]
-	* When fn4 returns, fn2 a;sp returns and the space for fn2 is deallocated.
+	* When fn4 returns, fn2 also returns and the space for fn2 is deallocated.
 	[!Graphic 6]
 
 After a function is returned, the memory that was used for the data is freed and deallocated. Now that memory can be used for something else, other data.
