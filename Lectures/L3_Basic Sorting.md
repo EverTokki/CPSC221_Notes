@@ -11,3 +11,4 @@ in-place
 running time
 not all instructions are equal
 
+insertion sort starts with 1 for int i because the first one will be a ssumeed to be already sorted
