@@ -1,0 +1,31 @@
+pointer = the value of the address the pointer is pointing to
+how to set up a pointer
+int *a = some address
+a --> some address [some value]
+hence
+*a = some value
+
+todo: write out the handout answers from lecture 2
+todo: write out the handout answers from lecture 3
+
+handout
+
+line 10:
+a b c x y *x *y **y
+
+4 7 4 0x100 0x3000 4 0x1000 4
+
+line12
+2 7 2 0x1000 0x3000 4 0x1000 4
+
+line13
+2 7 2 0x2000 0x3000 7 0x2000 7
+
+line14
+
+line15 
+[!graphic]
+
+
+figure out formatting for subtitles
+make graphics for pointers
