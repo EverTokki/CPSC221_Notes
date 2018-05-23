@@ -47,3 +47,36 @@ void printList (Node* head) {
 	}
 }
 ```
+
+**LList.cpp**
+```cpp
+void LList::insertBack(int val) {
+	Node* newN = new Node(val, null);
+
+	tail->next = newN;
+	tail = newN;
+
+	length++;
+}
+```
+
+**Base case:**
+Consider the case where we're working with an empty list.
+
+**LList.cpp**
+```cpp
+void LList::insertBack(int val) {
+	Node* newN = new Node(val, null);
+
+	if (head == null) {
+		head = newN;
+	} // if tail == null, we can't do tail -> next
+	else {
+	tail->next = newN;
+	}
+	
+	tail = newN;
+
+	length++;
+}
+```
