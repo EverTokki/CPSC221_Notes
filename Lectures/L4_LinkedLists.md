@@ -52,3 +52,6 @@ p=p->next; // this will become a loop.
 Insertion
   * Insertion in a singly-linked list requires only updating the next node reference of the preceding position
   [!Graphic - slide "Insertion"]
+
+Delet
+
