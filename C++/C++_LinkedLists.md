@@ -72,11 +72,19 @@ void LList::insertBack(int val) {
 		head = newN;
 	} // if tail == null, we can't do tail -> next
 	else {
-	tail->next = newN;
+		tail->next = newN;
 	}
 	
 	tail = newN;
-
 	length++;
 }
 ```
+
+
+/// Why not cur -> next 
+and then
+cur -> next -> prev?
+
+because by that time we're already pointing to 7 in the example
+which we already reset the pointer to
+so it wont work
