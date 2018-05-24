@@ -1,7 +1,8 @@
-# C++ Programming Basics
-[https://repl.it/@aestey/cpsc221-sphere]
+# Constructors
+Code used in this lecture can be found [here.](https://repl.it/@aestey/cpsc221-sphere)
 
-### 1. More C++ - Constructors
+------
+
 **main.cpp**
 ```cpp
 #include "sphere.h"
@@ -16,23 +17,23 @@ int main() {
 
 Several things about C++ are revealed by our first program:
 
-  1. always start at main 
+  1. Always start at main 
     `main.cpp :4`
-  2. declare an object of type Sphere 
+  2. Declare an object of type Sphere 
     `main.cpp :5, main.cpp :1`
   3. print out radius of S 
     `main.cpp :6, main.cpp :2`
-  4. However, our program is unreliable. Why?
-    * No constructor - s could be not instantiated
-    * in C++, every variable has some defauly value but we haven't set that.
 
+However, our program is unreliable. Why?
+  * No constructor - There is a possibility that s could be not instantiated
+  * In C++, every variable has some default value but we haven't set that.
+
+------
+ 
+### Custom Default Constructor, Custom Non-Default Constructor
 
 Default Constructor:
-  
-  Automatic; assign "random" (junk) values to variables if you dont initialize them ourselves.
-
- 
-### 2. Custom Default Constructor, Custom Non-Default Constructor
+  * Automatic; assign "random" (junk) values to variables if you dont initialize them ourselves.
 
 **sphere.h**
 ```cpp
@@ -79,15 +80,4 @@ void Sphere::setRadius(double r) {
 ```
 As soon as we define custom contructor(s), we must use one of our defined constructors.
 ```
-
-### 3. Pointers and References - Introduction
-A major component of C++ that will be used throughout all of CS221 is the use of references and pointers. 
-References and pointers both:
-  * Are extremely powerful, but extremely dangerous
-  * Are a **level of indirection** via memory to the data.
-
- As a level of indirection via memory to the data: 
-   1. `*` pointer to where data is in memory
-   2. `&` address to where data is being stored
-
-### Pointers and References
+------

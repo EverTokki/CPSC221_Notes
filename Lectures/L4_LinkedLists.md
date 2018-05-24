@@ -1,4 +1,4 @@
-## Linked Lists
+# Linked Lists
 
 Optimization of Unsorted lists:
 We can remove an item from an array and put the last element in that place instead so that we don't have to shift every element in the array to fill that empty space up.

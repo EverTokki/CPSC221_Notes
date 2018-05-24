@@ -14,6 +14,8 @@
 	* Heap grows downwards
 	* Stack grows upwards
 	
+	------
+
 ### 2. Variable Scope
   * What does scope mean?
 	* Accessibility or lifetime of a variable
@@ -45,6 +47,8 @@ void fn2() {
 	* int x and y is stored inside the stackframe
 	* when fn1 is returned, the space used for fn1 is freed
 	
+	------
+
 ### 3. Local variables on the "Stack"
 
 ```cpp
@@ -83,6 +87,8 @@ After a function is returned, the memory that was used for the data is freed and
 
 If a value of a variable is not initialized, the program might just bring the junk that was stored in *that* memory (where the new variable now sits) which is the data that was used at that specific memory space right before it was deallocated.
 
+------
+
 ### 4. Dynamic Allocation
 
   * When we use the `new` keyword we allocate memory on the heap.
@@ -101,6 +107,7 @@ If a value of a variable is not initialized, the program might just bring the ju
     * The `delete` command calls the object's destructor (in C++)
 	* This also "marks" the memory as free (usable)
 
+------
 
 ###  5. Stack vs. Heap
 
@@ -116,3 +123,5 @@ Now we have fragmentation- which are gaps made by freeing memory in some spaces.
 Stack is a simple, cheap allocation, Why use stack over heap?
   * Lasts longer- depends on the scope we want to use in our program
   * For many programs, we need both. If we only need a variable for a function, then declare it locally (stack).
+
+------

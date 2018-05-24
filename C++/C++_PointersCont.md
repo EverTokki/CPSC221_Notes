@@ -21,7 +21,6 @@ int main() {
 Variable values after execution of line numbers:
 (assume `&a = 0x1000`, `&b = 0x2000`, and `&x = 0x3000`)
 
-
 [!one graphic that shows all steps - including 5 mini-graphics]
 
 ||`a`|`b`|`c`|`x`|`y`|`*x`|`*y`|`**y`|
@@ -67,7 +66,9 @@ int main() {
 }
 ```
 
-#### Parameter passing
+------
+
+### Parameter passing
 
 We need to look closely at our function calls and our function signatures
 
@@ -76,8 +77,9 @@ We need to look closely at our function calls and our function signatures
   * Pass by reference: Alias to calling object, multiply
   * Pass by pointers: Address of an object in memory, sum
 
+------
 
-#### Calling Functions
+### Calling Functions
 
 ||By Value|By Pointer|By Reference|
 |:---|:---:|:---:|:---:|
@@ -86,3 +88,5 @@ We need to look closely at our function calls and our function signatures
 |Is there always a valid object passed into the function?|Yes|No (NULL)|Yes (Because when we create an alias, we will always refer to a value to something that already exists)|
 |Speed|Slow. Needs to copy ALL the memory. e.g.) Big arrays|Fast. Only thing we're passing over is just an address.|Fast.|
 |Safety|Safe - Can't do damage to the original object.|Not safe: Follows the address and changes the data which can corrupt the original data.|Not safe.|
+
+------

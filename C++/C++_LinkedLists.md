@@ -1,4 +1,4 @@
-### C++ Linked Lists
+# Linked Lists
 
 **Node.h**
 
@@ -31,8 +31,11 @@ void printList (Node* head) {
 	}
 }
 ```
-Q: What is the problem of this code?
-We're moving the head itself which should be keeping track of the first item in the list. So we cannot keep track of the first item in the list anymore.
+
+------
+
+**Q:** What is the problem of this code?
+**A:** We're moving the head itself which should be keeping track of the first item in the list. So we cannot keep track of the first item in the list anymore.
 
 [!Graphic of ll]
 
@@ -59,6 +62,8 @@ void LList::insertBack(int val) {
 	length++;
 }
 ```
+
+------
 
 **Base case:**
 Consider the case where we're working with an empty list.
@@ -88,3 +93,5 @@ cur -> next -> prev?
 because by that time we're already pointing to 7 in the example
 which we already reset the pointer to
 so it wont work
+
+------

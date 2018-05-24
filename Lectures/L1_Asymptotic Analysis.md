@@ -8,6 +8,8 @@
 
   * Abstract Data Type (ADT): A collection of data and a set of operations that can be performed on the collection so that the data behave in a well-defined way
 
+------
+
 ### 2. Suppose we have a collection of people at a concert. How are we going to find a specific person, given their name?
 
 ```
@@ -19,6 +21,8 @@ n = input size
 
   * Ask them to stand up and wave: *T(n)* = 60
   * Ask everyone in the audience, one at a time, if their name is the same as the given: *T(n)* = 7*n* + 4
+
+------
 
 ### 3. Asymptotic Analysis
 
@@ -86,7 +90,9 @@ Examples:
 |Polynomial |      *O*(*n*<sup>*k*</sup>)             |*k* is a constant; "tractable"|
 |Exponential|      *O*(*c*<sup>*n*</sup>)             |*c* is a constant > 0; "intractable"|
 
-#### Dominance
+------
+
+### 4. Dominance
 We can look at the dominant term to guess at a big-O growth rate. 
 
 e.g. *T(n)* = 2*n*<sup>2</sup> + 600*n* + 60000
@@ -94,7 +100,9 @@ e.g. *T(n)* = 2*n*<sup>2</sup> + 600*n* + 60000
   * Between *n* = 100 and *n* = 300, the linear term dominates
   * Beyond *n* = 300, the quadratic term dominates, *T(n)* ∈ *O*(*n*<sup>2</sup>)
 
-#### Analyzing Code
+------
+
+### 5. Analyzing Code
 *Types of analysis*
 
   * Bound flavour

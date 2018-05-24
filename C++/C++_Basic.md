@@ -27,6 +27,8 @@
  }
  ```
 
+------
+
 ### 2. Variables and Classes in C++
 
  Every variable is defined by four properties:
@@ -58,6 +60,8 @@ When we create a class in c++ we want to separate 2 things:
   * sphere.cpp
 
   	The implementation of the code
+
+------
 
 ### 3. Our first class
 
@@ -105,18 +109,22 @@ double Sphere::getVolume() {
 }
 ```
 
+------
+
 ### 4. Key Concepts in C++ Classes:
 Every class will be made up of common key pieces:
 
   1. Inclusion guards
-  `sphere.h :1 :2 and :17`
+    `sphere.h :1 :2 and :17`
   2. class definition (ends with ;)
-  `sphere.h :4 ... :15`
+    `sphere.h :4 ... :15`
 
   3. including header file
-  `sphere.cpp :1`
+    `sphere.cpp :1`
   4. double colon is scope resolution operator
-  `sphere.cpp :3`
+    `sphere.cpp :3`
   
-   ⇒ This signifies that the method belongs to the class specified before the double colon
+     ⇒ This signifies that the method belongs to the class specified before the double colon
+
+------
 

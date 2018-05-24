@@ -1,27 +1,39 @@
-### 1. Recap:
-
-Pass by value ...
-
-Why do we use the keyword const?
-We want to create a copy of the object:
-```
-void changeRadius (const Sphere& s1)
-```
-We want to create a new Sphere to copy over the values
+# Deconstructors
 
 Course webpage >> Resources : C++ Videos; Memory, pointers, constructors, deconstructors
+
 Do exercises! Watch the videos and follow along with them.
 
-### 2. The Big Three in C++
-The rule of thumb in C++ is that if a class defines any of the three functions constructtor, destructor, and copy assignment operator - then it should explicitly define all three and not rely on their default implementation.
+
+### Recap
+
+  * Pass by value: object passed in is a copy; will not change original.
+    * `void changeRadius (Sphere s1)`
+  * Pass by pointer: object passed in points to original data; dereferencing will change original.
+    * `void changeRadius (Sphere* s1)`
+  * Pass by reference: object passed in is an alias to the original; will change aliased object.
+    * `void changeRadius (Sphere& s1)`
+  * We can also add the keyword `const`, which will prevent changing the passed in object:
+    * `void changeRadius (const Sphere& s1)`
+
+**Q.** Why do we use the keyword const?
+
+**A.** We want to create a copy of the object! We want to create a new Sphere to copy over the values.
+
+------
+
+### The Big Three in C++
+The rule of thumb in C++ is that if a class defines any of the three functions (constructor, destructor, and copy assignment operator) - then it should explicitly define all three and not rely on their default implementation.
 
   * Constructor: Any time we create an instance of an object
   * Destructor: Any time an object memory is being de-allocated
     * Stack: When the function returns
     * Heap: When we delete. (When you use `new`, you should use `delete`. Don't use `delete` when you haven't used `new`.)
+  * Copy assignment operator (`=`): Clears memory of the variable and then updates its state
 
+------
 
-Q: Can you use the delete keyword in another function?
+**Q:** Can you use the delete keyword in another function?
 
 ```cpp
 makeSphere() {
@@ -41,7 +53,9 @@ delete mySphere;
 // This deletes the original Sphere data.
 ```
 
-Copy assignment operator: `=` Clearing memory and then updating state
+**A:** Yes, as far as there are the same amount of `delete` as the `new`.
+
+------
 
 **CustomArray.h**
 
@@ -58,6 +72,7 @@ class Array {
 ```
 
 **Implementation:**
+
 ```cpp
 Array::Array ( int s, int* v ) {
 	size = s;
@@ -80,30 +95,35 @@ int main() {
 }
 ```
 
-Q: This program crashes when run. Why?
+**Q:** This program crashes when run. Why?
 
 [!Graphics]
-When the function returns, the destructor is going to be called.
-This sets the values of a1's array to null.
-The destructor goes to `a1` and clears all the data for a1. However, if the destructor is called for a2, the program cannot clear a memory that already has been deleted.
 
-The code crashes because a1 and a2 both have `vals` which is a pointer to an array on the heap. Both the pointer vales are holding the same address value. Hence when we delete a1, we can no longer delete that in a2. What we want is for a2 to be pointing to something else which has its own values of {1, 2, 3, 4}. What we did was a shallow copy, what we want is a deep copy.
+**A:** When the main function returns, the destructor is going to be called.
 
+This sets the values of `a1`'s array to null.
 
-const will allow us to limit modifying the constructor that is given to an argument.
+However, if the destructor is called for `a2`, the program cannot clear a memory that already has been deleted.
+
+The code crashes because `a1` and `a2` both have `vals` which is a pointer to an array on the heap. The pointer vals of both arrays are holding the same address value. Hence when we delete `a1`, we can no longer delete that in `a2`. What we want is for `a2` to be pointing to something else which has its own values of `{1, 2, 3, 4}`. What we did was a shallow copy, what we want is a deep copy.  
+
+`const` will allow us to limit modifying the constructor that is given to an argument.
+
+------
+
+### `.` vs `->`
 
 [!Graphic .vs->]
 
-. notation: i am at the right place
--> notation: i am not at the right place i am supposed to be, so i want to dereference what I need
+`.` notation: "I am at the right place"
+`->` notation: "I am not at the right place I am supposed to be, so I want to dereference what I need"
 
-`a1.size`
-offset to local variable
+  * `a1.size`
+    * offset to local variable
+  * `a2->size`
+    * follow the pointer and then offset to local variable
 
-`a2->size`
-follow the pointer and then offset to local variable
-
-Explicitly defining a custom copy constructor:
+### Explicitly defining a custom copy constructor:
 
 **Implementation**
 
@@ -126,4 +146,5 @@ Array::~Array() {
 }
 ```
 
+------
 
