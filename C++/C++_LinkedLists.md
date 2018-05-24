@@ -22,6 +22,8 @@ public:
 }
 ```
 
+------
+
 **Print all values in a linked list:**
 ```cpp
 void printList (Node* head) {
@@ -32,9 +34,8 @@ void printList (Node* head) {
 }
 ```
 
-------
-
 **Q:** What is the problem of this code?
+
 **A:** We're moving the head itself which should be keeping track of the first item in the list. So we cannot keep track of the first item in the list anymore.
 
 [!Graphic of ll]
@@ -85,13 +86,8 @@ void LList::insertBack(int val) {
 }
 ```
 
+**Q:** Why can't we do `cur -> next` and then do `cur -> next -> prev` ?
 
-/// Why not cur -> next 
-and then
-cur -> next -> prev?
-
-because by that time we're already pointing to 7 in the example
-which we already reset the pointer to
-so it wont work
+**A:** Because by the time we do `cur -> next -> prev`, we are already pointing to node 7 in the example - which we already reset the pointer to - so it wont work as intended.
 
 ------

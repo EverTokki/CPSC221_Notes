@@ -118,6 +118,8 @@ The code crashes because `a1` and `a2` both have `vals` which is a pointer to an
   * `a2->size`
     * follow the pointer and then offset to local variable
 
+------
+
 ### Explicitly defining a custom copy constructor:
 
 **Implementation**
@@ -143,3 +145,23 @@ Array::~Array() {
 
 ------
 
+**Implementation**
+
+```cpp
+int main() {
+	int vals[4] = {1, 2, 3, 4};
+
+	Array a1(4, vals);
+	Array a2(a1);
+	Array a3;
+
+	a3 = a1; // Same mistake as we did originally
+	// a3 and a1's vals point to the same location
+	return 0;
+}
+```
+
+*so..... we use*
+
+### Assignment Operator
+```
