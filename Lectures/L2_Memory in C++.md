@@ -70,7 +70,7 @@ void fn1() {
 ```
 
   * A step-by-step breakdown:
-    * A stackframe for all data needed in fn1 is created - `int a` is in here!*
+    * A stackframe for all data needed in fn1 is created - `int a` is in here!
     
     ![fn1](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/fn1.png "fn1")
 	* fn2 is called, and a stackframe for all data needed in fn2 is created
