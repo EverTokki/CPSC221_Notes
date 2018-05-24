@@ -36,9 +36,9 @@ void printList (Node* head) {
 
 **Q:** What is the problem of this code?
 
-**A:** We're moving the head itself which should be keeping track of the first item in the list. So we cannot keep track of the first item in the list anymore.
+![Where the head should be](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/node1.png "Where the head should be")
 
-[!Graphic of ll]
+**A:** We're moving the head itself which should be keeping track of the first item in the list. So we cannot keep track of the first item in the list anymore.
 
 **Fixed code:**
 ```cpp
@@ -87,6 +87,8 @@ void LList::insertBack(int val) {
 ```
 
 **Q:** Why can't we do `cur -> next` and then do `cur -> next -> prev` ?
+
+[!Graphic]
 
 **A:** Because by the time we do `cur -> next -> prev`, we are already pointing to node 7 in the example - which we already reset the pointer to - so it wont work as intended.
 

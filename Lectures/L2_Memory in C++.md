@@ -37,7 +37,7 @@ void fn1(){
 void fn2() {
 	int z = 0;
 	fn1(); 
-	// at this point we will not have access to x, y anymore
+	// At this point we will not have access to x, y anymore
 }
 ```
 
@@ -64,24 +64,24 @@ void fn2() {
 }
 void fn1() {
 	int a;
-	//more code
+	// more code
 	fn2();
 }
 ```
 
   * A step-by-step breakdown:
     * A stackframe for all data needed in fn1 is created - `int a` is in here!*
-	[!Graphic 1]
+    ![fn1](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/fn1.png "fn1")
 	* fn2 is called, and a stackframe for all data needed in fn2 is created
-	[!Graphic 2]
+	![fn2](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/fn2.png "fn2")
 	* fn3 is called, and a stackframe for all data needed in fn3 is created
-	[!Graphic 3]
+	![fn3](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/fn3.png "fn3")
 	* When fn3 returns, the stackframe is deallocated (freed) and so the `int n` space, used for fn3, is deallocated
-	[!Graphic 4]
+	![fn4](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/fn4.png "fn4")
 	* fn4 is called, and a stackframe for all data needed in fn4 is called on the memory space previously freed from fn3
-	[!Graphic 5]
+	![fn5](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/fn5.png "fn5")
 	* When fn4 returns, fn2 also returns and the space for fn2 is deallocated.
-	[!Graphic 6]
+	![fn6](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/fn6.png "fn6")
 
 After a function is returned, the memory that was used for the data is freed and deallocated. Now that memory can be used for something else, other data.
 

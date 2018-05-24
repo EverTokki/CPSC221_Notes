@@ -67,7 +67,6 @@ int main() {
 
 (Under the circumstances radius is a public variable)
 
-
  You don't want to return the local address of local variables as the function will deallocate the following memory when the function returns, and it will be unaccessible after it goes out of scope.
 
  ------
