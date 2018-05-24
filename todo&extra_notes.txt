@@ -8,7 +8,8 @@ hence
 todo: write out the handout answers from lecture 2
 todo: write out the handout answers from lecture 3
 
-handout
+
+handout c++ pointers
 
 line 10:
 a b c x y *x *y **y
@@ -29,3 +30,5 @@ line15
 
 figure out formatting for subtitles
 make graphics for pointers
+
+memory in c++ = 3 images each, number label each explanation
