@@ -35,8 +35,11 @@ The rule of thumb in C++ is that if a class defines any of the three functions (
 
 **Q:** Can you use the delete keyword in another function?
 
-![Constructing a Sphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph1.png "Constructing a Sphere Object")
+**A:** Yes, as far as there are the same amount of `delete` as the `new`.
+
 **Constructing a Sphere Object**
+
+![Constructing a Sphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph1.png "Constructing a Sphere Object")
 
 ```cpp
 makeSphere() {
@@ -48,23 +51,22 @@ return s1;
 }
 ``` 
 
-![Returning a Sphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph2.png "Returning a Sphere Object")
 **A Sphere Object is returned to `*mySphere`, allowing it to point to the same object**
 
+![Returning a Sphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph2.png "Returning a Sphere Object")
 
 ```cpp
 Sphere *mySphere = makeSphere();
 ```
 
-![Delete mySphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph3.png "Delete mySphere")
 **mySphere is deallocated and ready for next memory use.**
+
+![Delete mySphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph3.png "Delete mySphere")
 
 ```cpp
 delete mySphere;
 // This deletes the original Sphere data.
 ```
-
-**A:** Yes, as far as there are the same amount of `delete` as the `new`.
 
 ------
 
