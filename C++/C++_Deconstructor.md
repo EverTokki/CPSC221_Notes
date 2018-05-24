@@ -37,36 +37,11 @@ The rule of thumb in C++ is that if a class defines any of the three functions (
 
 **A:** Yes, as far as there are the same amount of `delete` as the `new`.
 
-**Constructing a Sphere Object**
-
-![Constructing a Sphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph1.png "Constructing a Sphere Object")
-
-```cpp
-makeSphere() {
-Sphere* s1 = new Sphere(4);
-// This is returning a pointer to where sphere data is stored in memory.
-
-return s1;
-// We are returning the value, or 0x3000 of s1.
-}
-``` 
-
-**A Sphere Object is returned to `*mySphere`, allowing it to point to the same object**
-
-![Returning a Sphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph2.png "Returning a Sphere Object")
-
-```cpp
-Sphere *mySphere = makeSphere();
-```
-
-**mySphere is deallocated and ready for next memory use.**
-
-![Delete mySphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph3.png "Delete mySphere")
-
-```cpp
-delete mySphere;
-// This deletes the original Sphere data.
-```
+| Code | Diagram |
+| :--- | :---:|
+| <pre>makeSphere() {<br>&nbsp;Sphere* s1 = new Sphere(4);<br>&nbsp;return s1;<br>}</pre> This function returns a pointer to where sphere data is stored in memory. We are returning the value, or 0x3000 of s1. | ![Constructing a Sphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph1.png "Constructing a Sphere Object")|
+|<pre>Sphere *mySphere = makeSphere();</pre> | **A pointer is returned to `*mySphere`, allowing it to point to the same object**![Returning a Sphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph2.png "Returning a Sphere Object")|
+|<pre>delete mySphere;</pre> This deletes the original Sphere data.|**mySphere is deallocated and ready for next memory use.** ![Delete mySphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph3.png "Delete mySphere")|
 
 ------
 
