@@ -82,14 +82,21 @@ int main() {
 	return 0;
 }
 ```
+`Array a1(4, vals);`
+
+![a1 pointer](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/a1vals.png "a1 pointer")
+
+`Array a2(a1);`
+
+![a2 pointer](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/a2vals.png "a2 pointer")
 
 **Q:** This program crashes when run. Why?
-
-[!Graphics]
 
 **A:** When the main function returns, the destructor is going to be called.
 
 This sets the values of `a1`'s array to null.
+
+![a1 is deconstructed](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/a2valsD.png "a1 is deconstructed")
 
 However, if the destructor is called for `a2`, the program cannot clear a memory that already has been deleted.
 
