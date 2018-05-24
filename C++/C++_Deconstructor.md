@@ -35,6 +35,9 @@ The rule of thumb in C++ is that if a class defines any of the three functions (
 
 **Q:** Can you use the delete keyword in another function?
 
+![Constructing a Sphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph1.png "Constructing a Sphere Object")
+**Constructing a Sphere Object**
+
 ```cpp
 makeSphere() {
 Sphere* s1 = new Sphere(4);
@@ -43,12 +46,20 @@ Sphere* s1 = new Sphere(4);
 return s1;
 // We are returning the value, or 0x3000 of s1.
 }
-// !!! Graphic on handout
 ``` 
+
+![Returning a Sphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph2.png "Returning a Sphere Object")
+**A Sphere Object is returned to `*mySphere`, allowing it to point to the same object**
+
 
 ```cpp
 Sphere *mySphere = makeSphere();
+```
 
+![Delete mySphere](https://github.com/EverTokki/CPSC221_Notes/blob/master/images/sph3.png "Delete mySphere")
+**mySphere is deallocated and ready for next memory use.**
+
+```cpp
 delete mySphere;
 // This deletes the original Sphere data.
 ```
