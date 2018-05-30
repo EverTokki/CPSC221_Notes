@@ -32,3 +32,5 @@ figure out formatting for subtitles
 make graphics for pointers
 
 memory in c++ = 3 images each, number label each explanation
+
+graphiuc in recursive - make it gif
