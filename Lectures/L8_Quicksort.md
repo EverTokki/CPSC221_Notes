@@ -24,3 +24,5 @@
 * Ideally, partitions would be halved in size
 	* This doesn’t always happen… what is the worst case?
 
+	
+
