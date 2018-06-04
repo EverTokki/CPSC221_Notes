@@ -13,7 +13,7 @@
 * One unsorted array is divided into half
 * Looks at each element of the array and if one is smaller than another, put it into another array and repeat this process until both arrays are merged and sorted
 
-But how do we get the sorted sub=arrays?
+But how do we get the sorted sub-arrays?
 * Repeatedly divide arrays in half until each sub-array contains a single element
 * an element by itself is already sorted
 * merging two single-element arrays is simply a single comparison
